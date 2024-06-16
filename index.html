@@ -14,7 +14,7 @@
         type="hidden"
         name="apikey"
         id="apiKeyInput"
-        value="AR_INTEGR_WB"
+        value=""
         placeholder="Ingrese apikey"
         style="
           width: 940;
@@ -224,8 +224,8 @@
         const apiKey = getParameterByName("apiKey");
         if (actionUrl) {
           document.getElementById("FormName").action = actionUrl;
-          document.getElementById("seckeyInput").action = secKey;
-          document.getElementById("apiKeyInput").action = apiKey;
+          document.getElementById("seckeyInput").value = secKey;
+          document.getElementById("apiKeyInput").value = apiKey;
           console.log("actionUrl", actionUrl);
           console.log("secKey", secKey);
           console.log("apiKey", apiKey);
