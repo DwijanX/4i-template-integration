@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.idemia.integration",
+               "sha256_cert_fingerprints": ["2B:2B:89:F6:F8:1E:33:79:EF:C8:02:B0:AD:2D:8F:B0:E7:86:44:AA:3B:CC:3E:D8:38:D4:29:29:93:7D:85:38"] }
+}]
