@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-<body>
-  <h1>Redirigiendo a la aplicación...</h1>
-  <p>Si no se abre automáticamente, haz clic en el siguiente enlace:</p>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Obtener el URL actual
-      var currentUrl = window.location.href;
+  <body>
+    <h1>Redirigiendo a la aplicación...</h1>
+    <p>Si no se abre automáticamente, haz clic en el siguiente enlace:</p>
+    <a id="redirect-link">Abrir en la app</a>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the current URL
+        var baseurl = "https://4i-template-integration.vercel.app/auth/";
+        // Get the current URL parameters
+        var params = new URLSearchParams(window.location.search);
 
-      // Modificar el esquema de https a intent
-      var intentUrl = currentUrl.replace(/^https:/, 'intent:') + 
-        '#Intent;scheme=https;package=com.idemia.integration';
+        // Build the new URL with parameters
+        var currentUrl = baseurl + "?" + params.toString();
+        // Set the href of the link
+        document.getElementById("redirect-link").href = currentUrl;
 
-
-      // Redirigir automáticamente
-      window.location.href = intentUrl;
-    });
-  </script>
-</body>
+        // Automatically redirect
+        window.location.href = currentUrl;
+      });
+    </script>
+  </body>
 </html>
