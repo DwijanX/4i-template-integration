@@ -7,7 +7,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Get the current URL
-        var baseurl = "https://4i-template-integration.vercel.app/auth/";
+        var baseurl = "https://4i-template-integration.vercel.app/auth/app";
         // Get the current URL parameters
         var params = new URLSearchParams(window.location.search);
 
@@ -15,6 +15,8 @@
         var currentUrl = baseurl + "?" + params.toString();
         // Set the href of the link
         document.getElementById("redirect-link").href = currentUrl;
+        // Redirect to the new URL
+        window.location.replace(currentUrl);
       });
     </script>
   </body>
