@@ -3,7 +3,6 @@
 <body>
   <h1>Redirigiendo a la aplicación...</h1>
   <p>Si no se abre automáticamente, haz clic en el siguiente enlace:</p>
-  <a id="redirect-link">Abrir en la app</a>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Obtener el URL actual
@@ -13,8 +12,6 @@
       var intentUrl = currentUrl.replace(/^https:/, 'intent:') + 
         '#Intent;scheme=https;package=com.idemia.integration';
 
-      // Establecer el href del enlace
-      document.getElementById('redirect-link').href = intentUrl;
 
       // Redirigir automáticamente
       window.location.href = intentUrl;
