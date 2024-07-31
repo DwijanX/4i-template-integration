@@ -3,7 +3,7 @@
   <body>
     <h1>Redirigiendo a la aplicación...</h1>
     <p>Si no se abre automáticamente, haz clic en el siguiente enlace:</p>
-    <a id="redirect-link">Abrir en la app</a>
+    <a id="redirect-link" href="">Abrir en la app</a>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Get the current URL
@@ -15,7 +15,6 @@
         var currentUrl = baseurl + "?" + params.toString();
         // Set the href of the link
         document.getElementById("redirect-link").href = currentUrl;
-
       });
     </script>
   </body>
